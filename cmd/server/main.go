@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"log"
 	"net"
 
@@ -8,12 +9,15 @@ import (
 )
 
 const (
-	serverAddress = ":8080"
-	boardSize     = 3
+	defaultAddress = ":8080"
+	boardSize      = 3
 )
 
 func main() {
-	listener, err := net.Listen("tcp", serverAddress)
+	address := flag.String("address", defaultAddress, "server listen address")
+	flag.Parse()
+
+	listener, err := net.Listen("tcp", *address)
 	if err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
