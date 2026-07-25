@@ -151,7 +151,6 @@ go test ./...
 Some possible enhancements include:
 
 - Support for configurable board sizes from the command line
-- Multiple concurrent game sessions
 - Better handling of disconnected waiting players
 - AI opponent
 - Graphical user interface
