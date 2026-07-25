@@ -188,3 +188,24 @@ func (b *Board) CheckWinner() bool {
 
 	return won
 }
+
+// GetBoard returns the current state of the board
+func (b *Board) GetBoard() []string {
+	board := make([]string, len(b.gameBoard))
+
+	for row := range b.gameBoard {
+		line := make([]byte, len(b.gameBoard[row]))
+
+		for col, mark := range b.gameBoard[row] {
+			if mark == 0 {
+				line[col] = '_'
+			} else {
+				line[col] = mark
+			}
+		}
+
+		board[row] = string(line)
+	}
+
+	return board
+}
