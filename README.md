@@ -152,7 +152,6 @@ Some possible enhancements include:
 
 - Support for configurable board sizes from the command line
 - Multiple concurrent game sessions
-- Spectator mode
 - Better handling of disconnected waiting players
 - AI opponent
 - Graphical user interface
