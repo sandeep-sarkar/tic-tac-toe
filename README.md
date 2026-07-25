@@ -79,13 +79,13 @@ go run ./cmd/client
 Connect to a different server:
 
 ```bash
-go run ./cmd/client -address localhost:9000
+go run ./cmd/client -server localhost:9000
 ```
 
 Connect from another machine on the local network:
 
 ```bash
-go run ./cmd/client -address 192.168.1.245:9000
+go run ./cmd/client -server 192.168.1.245:9000
 ```
 
 ## Gameplay
